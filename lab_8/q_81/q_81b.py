@@ -1,7 +1,6 @@
-import matplotlib.pyplot as plt
 from numpy import heaviside as hs
-from scipy.integrate import solve_ivp
 import numpy as np
+from helpers.helpers import *
 
 
 def de_l81b(t, y):
@@ -11,16 +10,6 @@ def de_l81b(t, y):
 
 
 y0 = [0]
-t_span = np.array([
-    0,
-    20
-])
+t_span = [0, 20]
 
-y_soln = solve_ivp(fun = de_l81b, t_span=t_span, y0=y0, max_step = 0.01)
-
-plt.plot(
-    y_soln.t,
-    y_soln.y[0]
-)
-
-plt.show()
+plot_ivp(de_func=de_l81b, t_span=t_span, y0=y0, max_step=0.01, show=True)
