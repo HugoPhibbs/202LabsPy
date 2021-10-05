@@ -11,4 +11,5 @@ def plot_ivp(de_func: callable, t_span, y0, max_step=0.01, show=False):
 
 
 def plot_xy(x_vals, y_vals):
+    """Plots x and y vals using matplotlib, put into function to save the imports"""
     plt.plot(x_vals, y_vals)
