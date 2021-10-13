@@ -10,6 +10,8 @@ def plot_ivp(de_func: callable, t_span, y0, max_step=0.01, show=False):
         plt.show()
 
 
-def plot_xy(x_vals, y_vals):
+def plot_xy(x_vals, y_vals, show = False):
     """Plots x and y vals using matplotlib, put into function to save the imports"""
     plt.plot(x_vals, y_vals)
+    if show:
+        plt.show()
